@@ -14,7 +14,7 @@ def homepage(request):
             return HttpResponse("Email Address is taken")  
     elif request.method == "GET":
         all_news = News.objects.all()
-        context = { "all_news": all_news}
+        context = {"all_news": all_news}
     return render(request, "index.html", context)
 
 
