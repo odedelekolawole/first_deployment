@@ -13,7 +13,7 @@ def homepage(request):
         else:
             return HttpResponse("Email Address is taken")  
     elif request.method == "GET":
-        all_news = get_list_or_404(News)
+        all_news = News.objects.all()
         context = { "all_news": all_news}
     return render(request, "index.html", context)
 
