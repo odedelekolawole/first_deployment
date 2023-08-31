@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'BRIGHTNEWS.wsgi.application'
 
 DATABASES = {     
 'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'NEWS',
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'railway',
     'USER': 'postgres',
-    'PASSWORD': 'config("POSTGRE_PASSWORD")',
-    'HOST': 'localhost',
-    'PORT': '5432'
+    'PASSWORD': config("POSTGRE_PASSWORD"),
+    'HOST': 'containers-us-west-117.railway.app',
+    'PORT': '7529'
 } 
 }
 
